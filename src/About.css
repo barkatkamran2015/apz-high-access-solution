@@ -1,0 +1,142 @@
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    padding: 20px;
+    min-height: 100vh; /* Ensure container takes up full viewport height */
+  }
+  
+  .top-section {
+    display: flex;
+    flex-direction: row; /* Place text and image in a row */
+    align-items: center; /* Align items vertically center */
+    justify-content: center; /* Center-aligns items horizontally */
+    gap: 80px; /* Adds space between left and right sections */
+    margin-bottom: 20px; /* Adds spacing between top-section and bottom-section */
+  }
+  
+  .left-section {
+    width: 100%;
+    max-width: 700px; /* Max width for responsiveness */
+    text-align: left;
+  }
+  
+  .right-section {
+    width: 100%;
+    max-width: 700px; /* Max width for responsiveness */
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    max-width: 400px; /* Restricts the max width for larger screens */
+  }
+  
+  .collapsible-item {
+    margin-bottom: 15px;
+  }
+  
+  .collapsible-item button {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .collapsible-item button:hover {
+    background-color: #16ccec;
+  }
+  
+  .content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #007BFF;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .top-section {
+      flex-direction: column; /* Stack text and image on top of each other on smaller screens */
+    }
+  
+    .left-section,
+    .right-section {
+      width: 100%;
+      margin-bottom: 15px; /* Adds spacing between the image and text */
+    }
+  }
+  
+  #contact {
+    padding: 20px;
+    text-align: center; /* Center-aligns text within the container */
+  }
+  
+  .contact-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-title span{
+    color: #f56827; /* Example color for highlight */
+  }
+  
+  .about-width {
+    display: flex;
+    flex-direction: row; /* Place info containers in a row */
+    gap: 1rem; /* Adds spacing between each info container */
+    justify-content: center; /* Centers the containers horizontally */
+    flex-wrap: wrap; /* Allows containers to wrap if needed */
+    align-items: stretch; /* Ensures all items have the same height */
+}
+
+.about-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the icon and text horizontally */
+    padding: 10px;
+    border: 1px solid #ccc; /* Adds a border for distinction */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #f9f9f9; /* Sets a background color */
+    flex: 1 1 250px; /* Ensures equal size of containers */
+    max-width: 250px;
+    height: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about-1:hover {
+    transform: scale(1.05); /* Slightly enlarges the container on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+}
+
+.info-icon {
+    width: 40px; /* Adjusts the size of the icons */
+    height: 40px; /* Adjusts the size of the icons */
+    color: #f56827;
+    margin-top: 20px;
+    margin-bottom: 0.5rem; /* Adds space between the icon and text */
+}
+
+.about-1 h3 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 16px; /* Adjusts font size of headings */
+    margin: 0 0 10px 0; /* Adds bottom margin for better spacing */
+}
+
+.about-1 p {
+    margin: 0; /* Ensures no extra margin around paragraphs */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-width {
+        flex-direction: column; /* Stacks containers vertically */
+        gap: 1rem; /* Adds spacing between containers */
+        margin-left: 100px;
+    }
+}
+
+  
+  

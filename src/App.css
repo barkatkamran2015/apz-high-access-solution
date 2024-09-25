@@ -1,0 +1,848 @@
+/* src/components/Header.css */
+.header {
+    background-color: #fff;
+    position: sticky; /* Ensure the navbar sticks to the top */
+    top: 0; /* Ensure it sticks at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    height: 100px;
+    width: auto;
+    margin-left: 200px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-item {
+    margin-left: 1.5rem;
+    display: flex; /* Ensure items align properly */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-link {
+    color: #070606; /* Dark color for contrast */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex; /* Ensure alignment */
+    align-items: center; /* Center text vertically */
+}
+
+.navbar-link:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    color: #000; /* Black text color on hover */
+}
+
+/* Get In Touch Button */
+.navbar-button {
+    background-color: #f57c00; /* Orange color */
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.navbar-button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* Toggle Button for Mobile */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-toggle-icon {
+    font-size: 1.5rem;
+}
+
+/* Close Button */
+.navbar-close {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100px; /* Adjust top position to fit below the navbar */
+        right: 0;
+        background-color: #fff; /* White background for mobile menu */
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-item {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .navbar-close {
+        display: block; /* Show close button on small screens */
+    }
+
+    .navbar-logo-img {
+        margin-left: 30px; /* Adjust margin for smaller screens */
+    }
+}
+
+
+
+/* Home Page Style */
+
+.homepage {
+    font-family: "inter";
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Stacks text and image vertically on smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+    text-align: center; /* Center-align text for better readability */
+}
+
+.hero-text {
+    padding: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 55px; /* Adjust font size for responsiveness */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-text h1 span {
+    color: #e64a19;
+}
+
+.hero-text p {
+    font-size: 1.5rem; /* Adjust font size for responsiveness */
+    margin: 1rem 0; /* Remove fixed margins */
+    line-height: 1.8rem;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Add space between text and image */
+    width: 100%; /* Ensure container takes full width */
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 800px; /* Ensure image doesn't exceed max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #f57c00;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    margin: 50px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row; /* Align items horizontally on larger screens */
+        text-align: left; /* Align text to the left for larger screens */
+        padding: 10rem 2rem; /* Add padding to maintain spacing */
+    }
+
+    .hero-text {
+        margin-left: 200px; /* Add left margin for larger screens */
+        padding-right: 2rem; /* Add space between text and image */
+    }
+
+    .hero-text h1 {
+        font-size: 3rem; /* Larger font size for larger screens */
+    }
+
+    .hero-text p {
+        font-size: 1.25rem; /* Larger font size for larger screens */
+    }
+
+    .hero-image {
+        margin-top: 0; /* Remove top margin on larger screens */
+        margin-right: 150px; /* Add right margin to keep image away from edge */
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-text {
+        padding: 1rem;
+        margin: 0; /* Reset margins */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        text-align: left;
+    }
+
+    .hero-image {
+        width: 100%; /* Make image responsive */
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+}
+
+
+
+/* About Us style */
+.about-section {
+    background-color: #ffffff; /* Light background for contrast */
+    text-align: center; /* Center align text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin: 2rem auto; /* Margin for spacing outside the section */
+    max-width: 100%; /* Limit the width of the section */
+}
+
+.about-section button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 0.7rem 1.5rem; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 1rem; /* Space below the button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.about-section button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.about-section h2 {
+    font-size: 4rem; /* Size of the heading */
+    color: #112e42; /* Dark color for heading */
+    margin: 1rem 0; /* Space above and below the heading */
+}
+
+.about-section p {
+    font-size: 1.1rem; /* Slightly larger font size for readability */
+    color: #666; /* Gray color for text */
+    margin: 1rem 0; /* Space above and below the paragraph */
+}
+
+.about-section .cta-button {
+    display: inline-block; /* Make the link behave like a button */
+    background-color: #28a745; /* Green color for the CTA button */
+    color: white; /* Button text color */
+    padding: 0.7rem 1.5rem; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.about-section .cta-button:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+.about-section h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #1c3d72;
+}
+
+.card {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.btn-link {
+    color: #1c3d72;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.info-containers {
+    display: flex;
+    flex-wrap: wrap; /* Allow the containers to wrap into multiple rows */
+    justify-content: center; /* Center the rows of containers */
+    gap: 40px; /* Adds space between each container */
+    margin: 20px auto; /* Centers the entire .info-containers horizontally */
+}
+
+.info-container {
+    flex: 1 1 calc(33.33% - 40px); /* Ensures three containers per row, accounting for the gap */
+    display: flex;
+    flex-direction: column; /* Stack content inside vertically */
+    align-items: center; /* Center content horizontally */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 80px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    max-width: 450px; /* Set a maximum width for each container */
+}
+
+
+.info-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.info-container h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-container p {
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .info-container {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .info-container {
+        flex: 1 1 calc(100% - 20px); /* One item per row on small screens */
+    }
+    
+    .info-containers {
+        margin: 20px 50px; /* Reduce side margins on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-containers {
+        margin: 20px 20px; /* Further reduce side margins on very small screens */
+    }
+}
+
+
+.painting-section {
+    padding: 50px; /* Reduced padding for smaller screens */
+    background-color: #1c3d72;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.painting-section h2 {
+    color: #fff;
+    font-size: 2rem; /* Adjust font size for smaller screens */
+}
+
+.painting-section h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    margin-bottom: 20px; /* Space between heading and images */
+}
+
+.services-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service-link {
+    flex: 1 1 30%; /* Adjust the basis for smaller screens */
+    margin: 10px; /* Adjust spacing between images */
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    box-sizing: border-box; /* Ensure padding and margin are included in width */
+}
+
+.service-image {
+    width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.service-link:hover .service-image {
+    transform: scale(1.05); /* Slight zoom on hover */
+    cursor: pointer;
+}
+
+.service-text {
+    padding: 10px 0;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #000;
+    border-radius: 0 0 8px 8px; 
+}
+
+/* Media Queries for Extra Small Devices */
+@media (max-width: 768px) {
+    .painting-section {
+        padding: 20px; /* Reduce padding on small screens */
+    }
+
+    .painting-section h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .services-images {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .service-link {
+        flex: 1 1 auto; /* Allow items to adjust based on content */
+        margin: 10px 0; /* Adjust spacing between images */
+    }
+
+    .service-image {
+        width: 400px;
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .service-text {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+.remedial-section {
+    text-align: center;
+    padding: 20px;
+  }
+  .remedial-section h2{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  .icons-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .icons-wrapper {
+    display: flex;
+    animation: scroll-left 55s linear infinite;
+  }
+  
+  .icon-item {
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  .icon-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .icon-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjust color as needed */
+  }
+  
+  /* Keyframes for scrolling animation */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  /* About section */
+  .other-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content and image */
+    padding: 10px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  .other-section .content {
+    flex: 1;
+    max-width: 45%; /* Reduce width to bring elements closer */
+  }
+  
+  .other-section .content h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  .other-section .content p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .other-section .about-image {
+    flex: 1;
+    max-width: 45%; /* Reduce width to bring elements closer */
+  }
+  
+  .other-section .about-image img {
+    display: block;
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Media Query for wide screens */
+  @media (min-width: 1024px) {
+    .other-section {
+      justify-content: space-around; /* Space the content and image evenly */
+    }
+  
+    .other-section .content, 
+    .other-section .about-image {
+      max-width: 48%; /* Further reduce width on wide screens */
+    }
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .other-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .other-section .content,
+    .other-section .about-image {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .other-section .about-image img {
+      margin-top: 20px;
+    }
+  }
+  
+
+  /* project section */
+/* General styles for the project section */
+.project-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .project-section h1 {
+    font-size: 4rem; /* Adjusted for smaller screens */
+    font-weight: bold;
+    color: #1c3d72;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the container of the project images and text */
+  .project-images {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  /* Styles for each image container */
+  .project-image-wrapper {
+    flex: 1;
+    max-width: calc(33.333% - 10px); /* Adjusts width for spacing */
+    position: relative;
+  }
+  
+  /* Fixed size for images */
+  .project-image-wrapper img {
+    width: 100%;
+    height: 600px; /* Adjusted height for larger screens */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for images */
+  .project-image-wrapper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styles for the text below the images */
+  .project-text {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #030303;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .project-image-wrapper {
+      max-width: calc(50% - 10px); /* Two images per row on medium screens */
+    }
+  
+    .project-image-wrapper img {
+      height: 300px; /* Adjusted height for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-image-wrapper {
+      max-width: 100%; /* One image per row on small screens */
+    }
+  
+    .project-image-wrapper img {
+        width: 400px;
+      height: 500px; /* Adjusted height for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-section h1 {
+      font-size: 1.5em; /* Further reduced font size for very small screens */
+    }
+  
+    .project-image-wrapper img {
+      height: 150px; /* Adjusted height for very small screens */
+    }
+  }
+  
+
+
+  /* Contact Section */
+  .contact-header {
+    width: 100%;
+    height: 400px;
+    background-color: #187566; /* Set your desired background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-header h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+.contact-section {
+    padding: 40px 20px;
+    background-color: #116b81;
+}
+
+.contact-container {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+    flex: 1;
+    margin: 10px;
+}
+
+.contact-form-wrapper {
+    max-width: 600px; /* Limit the width of the form */
+    color: #ffffff;
+}
+.contact-form-wrapper h2{
+    font-size: 4rem;
+    color: #ffffff;
+}
+.contact-form-wrapper h2 span{
+    color: #f86420;
+}
+
+.contact-info-wrapper {
+    max-width: 700px; /* Limit the width of the text section */
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+.contact-info-wrapper h2 {
+    font-size: 2em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.contact-info-wrapper li {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 4rem;
+    font-family: "Poppins", Sans-serif;
+    color: #ffffff;
+}
+
+/* Contact Form */
+.contact-form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between fields */
+}
+
+.form-group {
+    flex: 1;
+    min-width: 45%; /* Each field takes about half the width of the container */
+}
+
+.form-group.full-width {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.submit-button {
+    background-color: #f56c2d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #e22860;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form-wrapper,
+    .contact-info-wrapper {
+        max-width: 100%;
+        margin-left: 10px;
+    }
+
+    .form-group {
+        min-width: 100%; /* Full width fields on small screens */
+    }
+}
